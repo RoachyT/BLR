@@ -18,7 +18,7 @@ namespace BLR.Controllers
         [HttpGet]
         public ActionResult GetBeer()
         {
-            HttpWebRequest request = WebRequest.CreateHttp("https://api.punkapi.com/v2/beers");
+            HttpWebRequest request = WebRequest.CreateHttp("https://api.punkapi.com/v2/beers?per_page=80&page=1");
             request.UserAgent = userAgent;
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 

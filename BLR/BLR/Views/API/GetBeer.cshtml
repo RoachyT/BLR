@@ -1,12 +1,13 @@
-﻿
 @{
     ViewBag.Title = "GetBeer";
 }
 
 
-
 @*<div class="container">
     <div class="row form-group">
+        <div class="col-sm">
+            <p class="font-weight-bold">ID #</p>
+        </div>
         <div class="col-sm">
             <p class="font-weight-bold">Name</p>
         </div>
@@ -26,6 +27,9 @@
     @foreach (var beer in ViewBag.BeerList["beers"])
     {
         <div class="row form-group">
+            <div class="col-sm">
+                @beer["id"]
+            </div>
             <div class="col-sm">
                 @beer["name"]
             </div>
@@ -73,3 +77,4 @@
         </table>
     </div>
 </div>
+
