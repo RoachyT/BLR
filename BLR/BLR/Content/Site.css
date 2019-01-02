@@ -22,3 +22,13 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.img-container {
+    width: 300px;
+}
+
+.beer-image {
+    max-height: 50px;
+    height: 70%;
+    width: auto;
+}
