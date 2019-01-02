@@ -8,6 +8,7 @@
 <table>
     <thead>
         <tr>
+            <th>ID #</th>
             <th>Name</th>
             <th>ABV</th>
             <th>IBU</th>
@@ -19,6 +20,7 @@
         @foreach (var beer in ViewBag.BeerList["beers"])
         {
             <tr>
+                <th>@beer["id"]</th>
                 <td>@beer["name"]</td>
                 <td>@beer["abv"]</td>
                 <td>@beer["ibu"]</td>
