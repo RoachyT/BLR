@@ -12,5 +12,11 @@ namespace BLR.Controllers
         {
             return View();
         }
+
+        public ActionResult Rando()
+        {
+            return View();
+
+        }
     }
 }
