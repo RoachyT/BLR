@@ -5,4 +5,26 @@
 
 <h2>Beer List</h2>
 
-<p>@ViewBag.BeerList["beers"]</p>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>ABV</th>
+            <th>IBU</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var beer in ViewBag.BeerList["beers"])
+        {
+            <tr>
+                <td>@beer["name"]</td>
+                <td>@beer["abv"]</td>
+                <td>@beer["ibu"]</td>
+                <td>@beer["description"]</td>
+                <td><img src=@beer["image_url"]/></td>
+            </tr>
+        }
+    </tbody>
+</table>
