@@ -3,29 +3,35 @@
     ViewBag.Title = "RandomBeer";
 }
 
-<h2>Random Beer Generator </h2>
+<div class="table-header container">
+    <h2>Random Beer Generator </h2>
+    <br />
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-header">
+                    <th scope="col">ID #</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">ABV</th>
+                    <th scope="col">IBU</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Image</th>
+                </tr>
+            </thead>
+            <tbody>
 
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>ABV</th>
-            <th>IBU</th>
-            <th>Description</th>
-            <th>Image</th>
-        </tr>
-    </thead>
-    <tbody>
-       
-        @foreach (var beer in ViewBag.RandomBeer["beers"])
-            { 
-            <tr>
-                <td>@beer["name"]</td>
-                <td>@beer["abv"]</td>
-                <td>@beer["ibu"]</td>
-                <td>@beer["description"]</td>
-                <td><img src=@beer["image_url"] /></td>
-            </tr>
-        }
-    </tbody>
-</table>
+                @foreach (var beer in ViewBag.RandomBeer["beers"])
+                {
+                <tr scope="row" class="table-row">
+                    <td>@beer["id"]</td>
+                    <td>@beer["name"]</td>
+                    <td>@beer["abv"]</td>
+                    <td>@beer["ibu"]</td>
+                    <td>@beer["description"]</td>
+                    <td class="img-container"><img src=@beer["image_url"] class="img-responsive" style="max-height: 400px; min-width: 100px;"/></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
