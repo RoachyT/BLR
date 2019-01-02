@@ -2,52 +2,6 @@
     ViewBag.Title = "GetBeer";
 }
 
-
-@*<div class="container">
-    <div class="row form-group">
-        <div class="col-sm">
-            <p class="font-weight-bold">ID #</p>
-        </div>
-        <div class="col-sm">
-            <p class="font-weight-bold">Name</p>
-        </div>
-        <div class="col-sm">
-            <p class="font-weight-bold">ABV</p>
-        </div>
-        <div class="col-sm">
-            <p class="font-weight-bold">IBU</p>
-        </div>
-        <div class="col-sm">
-            <p class="font-weight-bold">Description</p>
-        </div>
-        <div class="col-sm">
-            <p class="font-weight-bold">Image</p>
-        </div>
-    </div>
-    @foreach (var beer in ViewBag.BeerList["beers"])
-    {
-        <div class="row form-group">
-            <div class="col-sm">
-                @beer["id"]
-            </div>
-            <div class="col-sm">
-                @beer["name"]
-            </div>
-            <div class="col-sm">
-                @beer["abv"]
-            </div>
-            <div class="col-sm">
-                @beer["ibu"]
-            </div>
-            <div class="col-sm">
-                @beer["description"]
-            </div>
-            <div class="col-sm">
-                <img src=@beer["image_url"] class="img-thumbnail" />
-            </div>
-        </div>
-     }
-</div>*@
 <div class="table-header container">
     <h2>Beer List</h2>
     <br />
@@ -55,6 +9,7 @@
         <table class="table table-hover">
             <thead>
                 <tr class="table-header">
+                    <th scope="col">ID #</th>
                     <th scope="col">Name</th>
                     <th scope="col">ABV</th>
                     <th scope="col">IBU</th>
@@ -65,13 +20,14 @@
             <tbody>
                 @foreach (var beer in ViewBag.BeerList["beers"])
                 {
-                    <tr scope="row" class="table-row">
-                        <td>@beer["name"]</td>
-                        <td>@beer["abv"]</td>
-                        <td>@beer["ibu"]</td>
-                        <td>@beer["description"]</td>
-                        <td class="img-container"><img src=@beer["image_url"] class="img-responsive" style="max-height: 400px; min-width: 150px;" /></td>
-                    </tr>
+                <tr scope="row" class="table-row">
+                    <td>@beer["id"]</td>
+                    <td>@beer["name"]</td>
+                    <td>@beer["abv"]</td>
+                    <td>@beer["ibu"]</td>
+                    <td>@beer["description"]</td>
+                    <td class="img-container"><img src=@beer["image_url"] class="img-responsive" style="max-height: 400px; min-width: 150px;" /></td>
+                </tr>
                 }
             </tbody>
         </table>
