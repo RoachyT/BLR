@@ -33,7 +33,7 @@ namespace BLR.Controllers
 
                 string jsonData = data.ReadToEnd();
                 JObject beerData = JObject.Parse("{beers:" + jsonData + "}");
-                ViewBag.BeerList = beerData;
+                ViewBag.RandomBeer = beerData;
             }
 
             return View();
