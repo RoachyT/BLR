@@ -17,7 +17,7 @@
     </thead>
     <tbody>
        
-        @foreach (var beer in ViewBag.RandomBeer)
+        @foreach (var beer in ViewBag.RandomBeer["beers"])
             { 
             <tr>
                 <td>@beer["name"]</td>
