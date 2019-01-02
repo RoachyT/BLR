@@ -20,10 +20,6 @@ namespace BLR.Controllers
             return View();
         }
 
-        public ActionResult Rando()
-        {
-            return View();
-        }
         [HttpGet]
         public ActionResult RandoBeer()
         {
