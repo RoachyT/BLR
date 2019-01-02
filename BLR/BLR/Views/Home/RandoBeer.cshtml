@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "RandomBeer";
+}
+
+<h2>Random Beer Generator </h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>ABV</th>
+            <th>IBU</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach (var beer in ViewBag.RandomBeer)
+            { 
+            <tr>
+                <td>@beer["name"]</td>
+                <td>@beer["abv"]</td>
+                <td>@beer["ibu"]</td>
+                <td>@beer["description"]</td>
+                <td><img src=@beer["image_url"] /></td>
+            </tr>
+        }
+    </tbody>
+</table>
