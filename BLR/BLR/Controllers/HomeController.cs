@@ -38,10 +38,15 @@ namespace BLR.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Search()
+        {
+
             
+            return View();
 
-
-          
+        }
         
     }
 }
